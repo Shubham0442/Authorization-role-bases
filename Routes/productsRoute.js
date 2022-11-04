@@ -8,7 +8,7 @@ const productRouter = Router();
 
 productRouter.get("/read", async(req, res)=>{
 
-    const allProducts = await ProductModel();
+    const allProducts = await ProductModel.find();
     
     res.send(allProducts)
 });
